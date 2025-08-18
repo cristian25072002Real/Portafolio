@@ -7,11 +7,11 @@
 }
 
 main {
-  margin-top: 60px; /* Ajusta el valor para mayor o menor espacio */
-  /* Puedes mantener también tus otros estilos aquí */
+  margin-top: 60px; 
 }
-
-
+main section:first-of-type {
+  margin-top: 80px; 
+}
 body {
   background-color: #f0f2f5;
   color: #222;
@@ -315,8 +315,8 @@ footer {
   text-align: center;
 }
 
-/* Link para navegación suave */
 html {
   scroll-behavior: smooth;
 }
+
 
