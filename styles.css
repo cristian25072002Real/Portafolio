@@ -6,6 +6,12 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main {
+  margin-top: 60px; /* Ajusta el valor para mayor o menor espacio */
+  /* Puedes mantener también tus otros estilos aquí */
+}
+
+
 body {
   background-color: #f0f2f5;
   color: #222;
@@ -313,3 +319,4 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
