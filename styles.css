@@ -6,12 +6,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main {
-  margin-top: 60px; 
+section:first-of-type {
+  margin-top: 60px; /* Ajusta según lo que necesites */
 }
-main section:first-of-type {
-  margin-top: 80px; 
-}
+
 body {
   background-color: #f0f2f5;
   color: #222;
@@ -318,5 +316,6 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
 
 
