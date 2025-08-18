@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portafolio profesional de Cristian Sánchez Rodríguez, Desarrollador Web especializado en interfaces responsivas y desarrollo frontend." />
+  <title>Cristian Sánchez Rodríguez - Desarrollador Web</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <!-- Selector de idioma -->
+  <div class="lang-switch" role="navigation" aria-label="Language switcher">
+    <button id="esBtn" aria-pressed="true" aria-label="Cambiar a Español">ESP</button>
+    <button id="enBtn" aria-pressed="false" aria-label="Switch to English">EN</button>
+  </div>
+
+  <!-- Botón modo oscuro independiente -->
+  <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
+
+  <header class="hero fade-in" role="banner">
+    <nav class="main-nav" aria-label="Principal">
+      <ul>
+        <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="#certs" data-es="Certificaciones" data-en="Certificates">Certificaciones</a></li>
+        <li><a href="#skills" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+        <li><a href="#resume" data-es="Currículum" data-en="Resume">Currículum</a></li>
+        <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <img src="foto.jpg" alt="Foto de Cristian Sánchez Rodríguez" class="profile-img" />
+    <h1 class="name" data-es="Desarrollador Web" data-en="Web Developer">Desarrollador Web</h1>
+    <p class="summary"
+       data-es="Soy ingeniero en sistemas computacionales egresado en Febrero del 2025 con enfoque en desarrollo web. Experiencia en diseño de interfaces responsivas con HTML, CSS y JavaScript."
+       data-en="I am a Computer Systems Engineer (February 2025 graduate) focused on web development. Experienced in designing responsive interfaces with HTML, CSS, and JavaScript.">
+       Soy ingeniero en sistemas computacionales egresado...
+    </p>
+  </header>
+
+  <main>
+  <!-- Proyectos -->
+<section id="projects" aria-labelledby="projects-title" class="fade-in">
+  <h2 id="projects-title" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
+  <div class="project-gallery">
+
+    <div class="project-card">
+      <img src="proyecto1.jpg" alt="Nombre del Proyecto 1" />
+      <div class="project-info">
+        <h3>Nombre del Proyecto 1</h3>
+        <p>Breve descripción de tu proyecto realizado aquí.</p>
+        <p><strong>Tecnologías:</strong> HTML, CSS, JS</p>
+<a href="https://tuusuario.github.io/tu-repositorio/formulario/" target="_blank" rel="noopener">Ver Formulario</a>
+        <a href="https://tuproyecto1.com" target="_blank" rel="noopener">Demo</a>
+      </div>
+    </div>
+
+    <!-- Tarjeta del formulario -->
+    <div class="project-card">
+      <img src="formulario-preview.png" alt="Formulario de Encuesta" />
+      <div class="project-info">
+        <h3>Formulario de Encuesta</h3>
+        <p>Formulario interactivo para recopilar datos de usuarios. Hecho con HTML, CSS y JavaScript para validación y experiencia de usuario.</p>
+        <a href="https://tuusuario.github.io/formulario-encuesta/" target="_blank" rel="noopener">Ver Formulario</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Certificaciones -->
+    <section id="certs" aria-labelledby="certs-title" class="fade-in">
+      <h2 id="certs-title" data-es="Certificaciones" data-en="Certificates">Certificaciones</h2>
+      <div class="cert">
+        <img src="Captura de pantalla 2025-04-23 184257.png" alt="Certificado Responsive Web Design de freeCodeCamp" />
+        <span>Responsive Web Design – freeCodeCamp (2025)</span>
+      </div>
+      <div class="cert">
+        <img src="Captura de pantalla 2025-08-18 125207.png" alt="Certificación Scrum Foundation Professional CertiProf" />
+        <span>Scrum Foundation Professional Certification – CertiProf (2023)</span>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" aria-labelledby="skills-title" class="fade-in" aria-label="Habilidades">
+      <h2 id="skills-title" data-es="Habilidades" data-en="Skills">Habilidades</h2>
+      <div class="skill-bar">
+        <span>HTML</span>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:95%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <span>CSS</span>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <span>JavaScript</span>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:85%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currículum -->
+    <section id="resume" aria-labelledby="resume-title" class="fade-in">
+      <h2 id="resume-title" data-es="Currículum" data-en="Resume">Currículum</h2>
+      <embed src="CV Cristian Sánchez Rodríguez.pdf" type="application/pdf" width="100%" height="600px" aria-label="Curriculum Vitae PDF"/>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" aria-labelledby="contact-title" class="fade-in">
+      <h2 id="contact-title" data-es="Contacto" data-en="Contact">Contacto</h2>
+      <p>Email: <a href="mailto:cristian25072002@gmail.com">cristian25072002@gmail.com</a></p>
+      <p>Redes Sociales:
+        <a href="https://www.linkedin.com/in/cristian-sánchez-rodríguez-797a202a2" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a> | 
+        <a href="https://github.com/tuusuario" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer role="contentinfo" style="text-align: center; padding: 20px; font-size: 0.9rem; color: #666;">
+    &copy; 2025 Cristian Sánchez Rodríguez. Todos los derechos reservados.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
