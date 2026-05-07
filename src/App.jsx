@@ -33,7 +33,7 @@ export default function App() {
   const text = {
     en: {
       role:
-        "Systems Engineer • Technical Support • QA",
+        "Systems Engineer • Technical Support • QA • Web developer",
 
       about:
         "Computer Systems Engineer with experience in technical support, incident management, QA validation, and modern web development. Focused on building reliable systems and scalable digital experiences.",
