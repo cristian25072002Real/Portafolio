@@ -50,7 +50,7 @@ export default function App() {
 
     es: {
       role:
-        "Ingeniero en Sistemas • Soporte Técnico • QA",
+        "Ingeniero en Sistemas • Soporte Técnico • QA • Desarrollador web",
 
       about:
         "Ingeniero en Sistemas Computacionales con experiencia en soporte técnico, gestión de incidencias, validación QA y desarrollo web moderno. Enfocado en construir sistemas confiables y experiencias digitales escalables.",
