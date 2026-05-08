@@ -200,67 +200,104 @@ export default function App() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="py-24 px-6 max-w-6xl mx-auto">
+<section id="experience" className="py-24 px-6 max-w-6xl mx-auto">
 
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-slate-400 text-transparent bg-clip-text">
-          {text[language].experience}
-        </h2>
+  <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-slate-400 text-transparent bg-clip-text">
+    {text[language].experience}
+  </h2>
 
-        <div className="space-y-8">
+  <div className="space-y-10">
 
-          <motion.div
-            whileHover={{ y: -8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl transition duration-500"
-          >
-            <h3 className="text-2xl font-bold mb-2">
-              SowInfotech
-            </h3>
+    {/* SOWINFOTECH */}
+    <motion.div
+      whileHover={{ y: -8 }}
+      className="group bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl transition duration-500"
+    >
 
-            <p className="text-blue-400 mb-4">
-              {
-                language === "en"
-                  ? "Technical Support / Service Desk"
-                  : "Soporte Técnico / Service Desk"
-              }
-            </p>
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
 
-            <p className="text-slate-400">
-              {
-                language === "en"
-                  ? "Incident management, ticket resolution, system stabilization and remote technical support."
-                  : "Gestión de incidencias, resolución de tickets, estabilización de sistemas y soporte técnico remoto."
-              }
-            </p>
-          </motion.div>
+        <div>
+          <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">
+            SowInfotech
+          </h3>
 
-          <motion.div
-            whileHover={{ y: -8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl transition duration-500"
-          >
-            <h3 className="text-2xl font-bold mb-2">
-              Focus Innovation
-            </h3>
-
-            <p className="text-blue-400 mb-4">
-              {
-                language === "en"
-                  ? "Junior Web Developer"
-                  : "Desarrollador Web Junior"
-              }
-            </p>
-
-            <p className="text-slate-400">
-              {
-                language === "en"
-                  ? "Development of web systems for the Judiciary of Veracruz, backend/frontend implementation and documentation."
-                  : "Desarrollo de sistemas web para el Poder Judicial de Veracruz, implementación backend/frontend y documentación."
-              }
-            </p>
-          </motion.div>
-
+          <p className="text-blue-400 font-medium">
+            {language === "en"
+              ? "Technical Support / Service Desk"
+              : "Soporte Técnico / Service Desk"}
+          </p>
         </div>
 
-      </section>
+        <span className="text-slate-400 text-sm md:text-right">
+          Veracruz, México <br />
+          Mayo 2025 – Septiembre 2025
+        </span>
+
+      </div>
+
+      <p className="text-slate-300 mb-4">
+        {language === "en"
+          ? "Focused on incident resolution and system stability for business-critical applications."
+          : "Enfocado en resolución de incidencias y estabilidad de sistemas críticos para la operación."}
+      </p>
+
+      <ul className="space-y-2 text-slate-400 text-sm list-disc pl-5">
+        <li>Reduced downtime by resolving application incidents efficiently.</li>
+        <li>Tracked and managed tickets through full lifecycle.</li>
+        <li>Identified failure patterns through data analysis.</li>
+        <li>Improved system stability through preventive actions.</li>
+        <li>Provided remote technical support to end users.</li>
+      </ul>
+
+    </motion.div>
+
+    {/* FOCUS INNOVATION */}
+    <motion.div
+      whileHover={{ y: -8 }}
+      className="group bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl transition duration-500"
+    >
+
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+
+        <div>
+          <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">
+            Focus Innovation
+          </h3>
+
+          <p className="text-blue-400 font-medium">
+            {language === "en"
+              ? "Junior Web Developer"
+              : "Desarrollador Web Junior"}
+          </p>
+        </div>
+
+        <span className="text-slate-400 text-sm md:text-right">
+          Veracruz, México <br />
+          Julio 2024 – Abril 2025
+        </span>
+
+      </div>
+
+      <p className="text-slate-300 mb-4">
+        {language === "en"
+          ? "Web systems development for institutional platforms with focus on backend, frontend and data visualization."
+          : "Desarrollo de sistemas web institucionales enfocados en backend, frontend y visualización de datos."}
+      </p>
+
+      <ul className="space-y-2 text-slate-400 text-sm list-disc pl-5">
+        <li>Built a judicial system for the Veracruz government.</li>
+        <li>Developed frontend and backend features (JS, Python, HTML, CSS).</li>
+        <li>Generated real-time reports (PDF, Excel, charts).</li>
+        <li>Designed role-based access control system.</li>
+        <li>Collaborated in requirements gathering with users.</li>
+        <li>Used Git & GitHub for version control.</li>
+      </ul>
+
+    </motion.div>
+
+  </div>
+
+</section>
 
       {/* PROJECTS */}
       <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">
