@@ -442,17 +442,20 @@ export default function App() {
       className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
     >
       <h3 className="text-2xl font-bold mb-2">
-        💻 {language === "en" ? "Frontend & Web Development" : "Desarrollo Web y Frontend"}
+        💻 {language === "en" ? "Frontend & Web Development" : "Desarrollo Frontend y Web"}
       </h3>
 
       <p className="text-slate-400 mb-6 text-sm">
         {language === "en"
           ? "Building responsive interfaces, reusable components and interactive user experiences."
-          : "Creación de interfaces responsivas, componentes reutilizables y experiencias interactivas."}
+          : "Construcción de interfaces responsivas, componentes reutilizables y experiencias interactivas."}
       </p>
 
       <div className="flex flex-wrap gap-3">
-        {["React", "JavaScript", "HTML", "CSS", "Node.js", "Python", "Responsive UI"].map((skill, index) => (
+        {(language === "en"
+          ? ["React", "JavaScript", "HTML", "CSS", "Node.js", "Python", "Responsive Design"]
+          : ["React", "JavaScript", "HTML", "CSS", "Node.js", "Python", "Diseño Responsivo"]
+        ).map((skill, index) => (
           <span
             key={index}
             className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
@@ -482,7 +485,10 @@ export default function App() {
       </p>
 
       <div className="flex flex-wrap gap-3">
-        {["Incident Management", "Ticketing Systems", "Troubleshooting", "Remote Support", "Windows", "Documentation"].map((skill, index) => (
+        {(language === "en"
+          ? ["Incident Management", "Ticketing Systems", "Troubleshooting", "Remote Support", "Windows", "Documentation"]
+          : ["Gestión de Incidencias", "Sistemas de Tickets", "Resolución de Problemas", "Soporte Remoto", "Windows", "Documentación"]
+        ).map((skill, index) => (
           <span
             key={index}
             className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
@@ -502,7 +508,7 @@ export default function App() {
       className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
     >
       <h3 className="text-2xl font-bold mb-2">
-        🗄 {language === "en" ? "Databases & Development Tools" : "Bases de Datos y Herramientas"}
+        🗄 {language === "en" ? "Databases & Tools" : "Bases de Datos y Herramientas"}
       </h3>
 
       <p className="text-slate-400 mb-6 text-sm">
@@ -512,7 +518,10 @@ export default function App() {
       </p>
 
       <div className="flex flex-wrap gap-3">
-        {["SQL", "Git", "GitHub", "REST APIs", "Version Control"].map((skill, index) => (
+        {(language === "en"
+          ? ["SQL", "Git", "GitHub", "REST APIs", "Version Control"]
+          : ["SQL", "Git", "GitHub", "APIs REST", "Control de Versiones"]
+        ).map((skill, index) => (
           <span
             key={index}
             className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
@@ -538,11 +547,14 @@ export default function App() {
       <p className="text-slate-400 mb-6 text-sm">
         {language === "en"
           ? "Validation, testing and analysis to ensure system reliability and quality."
-          : "Validación, pruebas y análisis para garantizar la calidad y confiabilidad de los sistemas."}
+          : "Validación, pruebas y análisis para garantizar la confiabilidad y calidad de los sistemas."}
       </p>
 
       <div className="flex flex-wrap gap-3">
-        {["Functional Testing", "Bug Reporting", "System Validation", "User Testing", "Quality Assurance"].map((skill, index) => (
+        {(language === "en"
+          ? ["Functional Testing", "Bug Reporting", "System Validation", "User Testing", "Quality Assurance"]
+          : ["Pruebas Funcionales", "Reporte de Bugs", "Validación de Sistemas", "Pruebas de Usuario", "Aseguramiento de Calidad"]
+        ).map((skill, index) => (
           <span
             key={index}
             className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
