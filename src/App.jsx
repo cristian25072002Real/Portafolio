@@ -13,6 +13,7 @@ import encuesta from "./assets/encuesta.png";
 import scrum from "./assets/scrum.png";
 import responsive from "./assets/responsive.png";
 import cv from "./assets/CV Cristian Sánchez Rodríguez.pdf";
+import ExperienceCard from "./components/ExperienceCard";
 
 export default function App() {
   const [language, setLanguage] = useState("en");
@@ -199,104 +200,90 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* EXPERIENCE */}
+     {/* EXPERIENCE */}
 <section id="experience" className="py-24 px-6 max-w-6xl mx-auto">
 
   <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-slate-400 text-transparent bg-clip-text">
     {text[language].experience}
   </h2>
 
-  <div className="space-y-10">
+  <div className="space-y-8">
 
     {/* SOWINFOTECH */}
-    <motion.div
-      whileHover={{ y: -8 }}
-      className="group bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl transition duration-500"
-    >
-
-      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
-
-        <div>
-          <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">
-            SowInfotech
-          </h3>
-
-          <p className="text-blue-400 font-medium">
-            {language === "en"
-              ? "Technical Support / Service Desk"
-              : "Soporte Técnico / Service Desk"}
-          </p>
-        </div>
-
-        <span className="text-slate-400 text-sm md:text-right">
-          Veracruz, México <br />
-          Mayo 2025 – Septiembre 2025
-        </span>
-
-      </div>
-
-      <p className="text-slate-300 mb-4">
-        {language === "en"
-          ? "Focused on incident resolution and system stability for business-critical applications."
-          : "Enfocado en resolución de incidencias y estabilidad de sistemas críticos para la operación."}
-      </p>
-
-      <ul className="space-y-2 text-slate-400 text-sm list-disc pl-5">
-        <li>Reduced downtime by resolving application incidents efficiently.</li>
-        <li>Tracked and managed tickets through full lifecycle.</li>
-        <li>Identified failure patterns through data analysis.</li>
-        <li>Improved system stability through preventive actions.</li>
-        <li>Provided remote technical support to end users.</li>
-      </ul>
-
-    </motion.div>
+    <ExperienceCard
+      title="SowInfotech"
+      role={{
+        en: "Technical Support / Service Desk",
+        es: "Soporte Técnico / Service Desk"
+      }}
+      date={{
+        en: "May 2025 – September 2025",
+        es: "Mayo 2025 – Septiembre 2025"
+      }}
+      location="Veracruz, México"
+      summary={{
+        en: "Technical support focused on incident resolution, system stability and end-user assistance in production environments.",
+        es: "Soporte técnico enfocado en resolución de incidencias, estabilidad de sistemas y atención a usuarios en entornos productivos."
+      }}
+      points={{
+        en: [
+          "Resolved application incidents reducing downtime in critical processes",
+          "Tracked and managed tickets through full lifecycle",
+          "Analyzed failure patterns to prevent recurring issues",
+          "Improved system stability through corrective actions",
+          "Provided remote technical support to end users",
+          "Documented solutions for internal knowledge base"
+        ],
+        es: [
+          "Resolución de incidencias en aplicaciones reduciendo tiempos de inactividad en procesos críticos",
+          "Gestión completa de tickets desde apertura hasta cierre",
+          "Análisis de patrones de fallos para prevenir incidencias recurrentes",
+          "Mejora de estabilidad en sistemas mediante acciones correctivas",
+          "Soporte remoto a usuarios finales",
+          "Documentación de soluciones para base de conocimiento interna"
+        ]
+      }}
+    />
 
     {/* FOCUS INNOVATION */}
-    <motion.div
-      whileHover={{ y: -8 }}
-      className="group bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl transition duration-500"
-    >
-
-      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
-
-        <div>
-          <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">
-            Focus Innovation
-          </h3>
-
-          <p className="text-blue-400 font-medium">
-            {language === "en"
-              ? "Junior Web Developer"
-              : "Desarrollador Web Junior"}
-          </p>
-        </div>
-
-        <span className="text-slate-400 text-sm md:text-right">
-          Veracruz, México <br />
-          Julio 2024 – Abril 2025
-        </span>
-
-      </div>
-
-      <p className="text-slate-300 mb-4">
-        {language === "en"
-          ? "Web systems development for institutional platforms with focus on backend, frontend and data visualization."
-          : "Desarrollo de sistemas web institucionales enfocados en backend, frontend y visualización de datos."}
-      </p>
-
-      <ul className="space-y-2 text-slate-400 text-sm list-disc pl-5">
-        <li>Built a judicial system for the Veracruz government.</li>
-        <li>Developed frontend and backend features (JS, Python, HTML, CSS).</li>
-        <li>Generated real-time reports (PDF, Excel, charts).</li>
-        <li>Designed role-based access control system.</li>
-        <li>Collaborated in requirements gathering with users.</li>
-        <li>Used Git & GitHub for version control.</li>
-      </ul>
-
-    </motion.div>
+    <ExperienceCard
+      title="Focus Innovation"
+      role={{
+        en: "Junior Web Developer",
+        es: "Desarrollador Web Junior"
+      }}
+      date={{
+        en: "July 2024 – April 2025",
+        es: "Julio 2024 – Abril 2025"
+      }}
+      location="Veracruz, México"
+      summary={{
+        en: "Development of a web system for the Judicial Branch of Veracruz, working on frontend, backend and reporting systems.",
+        es: "Desarrollo de un sistema web para el Poder Judicial de Veracruz, participando en frontend, backend y generación de reportes."
+      }}
+      points={{
+        en: [
+          "Built a web system for the Judicial Branch of Veracruz",
+          "Developed frontend and backend features using JavaScript, Python, HTML and CSS",
+          "Generated real-time reports (PDF, Excel, charts)",
+          "Designed role-based access control system",
+          "Gathered requirements with end users",
+          "Used Git & GitHub for version control",
+          "Created technical documentation"
+        ],
+        es: [
+          "Desarrollo de un sistema web para el Poder Judicial de Veracruz",
+          "Implementación de frontend y backend con JavaScript, Python, HTML y CSS",
+          "Generación de reportes en PDF, Excel y gráficos en tiempo real",
+          "Diseño de sistema de roles y permisos",
+          "Levantamiento de requerimientos con usuarios finales",
+          "Uso de Git y GitHub para control de versiones",
+          "Elaboración de documentación técnica"
+        ]
+      }}
+    />
 
   </div>
-
 </section>
 
       {/* PROJECTS */}
