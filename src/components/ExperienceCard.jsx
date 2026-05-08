@@ -1,38 +1,63 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ExperienceCard({ title, role, date, location, summary, points }) {
+export default function ExperienceCard({
+  title,
+  role,
+  date,
+  location,
+  summary,
+  points,
+  language = "en"
+}) {
   const [open, setOpen] = useState(false);
 
   return (
     <motion.div
       whileHover={{ y: -6 }}
-      className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl cursor-pointer"
       onClick={() => setOpen(!open)}
+      className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 p-8 rounded-3xl cursor-pointer transition duration-300"
     >
 
-      <div className="flex justify-between items-start">
+      {/* HEADER */}
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
+
         <div>
           <h3 className="text-2xl font-bold">{title}</h3>
-          <p className="text-blue-400">{role.en}</p>
+
+          <p className="text-blue-400 font-medium">
+            {role[language]}
+          </p>
         </div>
 
-        <span className="text-slate-400 text-sm text-right">
-          {location}<br />{date}
+        <span className="text-slate-400 text-sm md:text-right">
+          {location}
+          <br />
+          {date[language]}
         </span>
+
       </div>
 
+      {/* SUMMARY */}
       <p className="text-slate-300 mt-4">
-        {summary.en}
+        {summary[language]}
       </p>
 
+      {/* TOGGLE TEXT */}
       <p className="text-xs text-slate-500 mt-3">
-        {open ? "Click to collapse ↑" : "Click to expand ↓"}
+        {open
+          ? language === "en"
+            ? "Click to collapse ↑"
+            : "Clic para cerrar ↑"
+          : language === "en"
+            ? "Click to expand ↓"
+            : "Clic para ver más ↓"}
       </p>
 
+      {/* DROPDOWN */}
       {open && (
         <ul className="mt-4 space-y-2 text-slate-400 text-sm list-disc pl-5">
-          {points.en.map((p, i) => (
+          {points[language].map((p, i) => (
             <li key={i}>{p}</li>
           ))}
         </ul>

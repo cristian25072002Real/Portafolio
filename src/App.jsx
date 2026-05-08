@@ -211,6 +211,7 @@ export default function App() {
 
     {/* SOWINFOTECH */}
     <ExperienceCard
+      language={language}
       title="SowInfotech"
       role={{
         en: "Technical Support / Service Desk",
@@ -235,7 +236,7 @@ export default function App() {
           "Documented solutions for internal knowledge base"
         ],
         es: [
-          "Resolución de incidencias en aplicaciones reduciendo tiempos de inactividad en procesos críticos",
+          "Resolución de incidencias en aplicaciones reduciendo tiempos de inactividad",
           "Gestión completa de tickets desde apertura hasta cierre",
           "Análisis de patrones de fallos para prevenir incidencias recurrentes",
           "Mejora de estabilidad en sistemas mediante acciones correctivas",
@@ -247,6 +248,7 @@ export default function App() {
 
     {/* FOCUS INNOVATION */}
     <ExperienceCard
+      language={language}
       title="Focus Innovation"
       role={{
         en: "Junior Web Developer",
@@ -264,21 +266,21 @@ export default function App() {
       points={{
         en: [
           "Built a web system for the Judicial Branch of Veracruz",
-          "Developed frontend and backend features using JavaScript, Python, HTML and CSS",
-          "Generated real-time reports (PDF, Excel, charts)",
+          "Developed frontend and backend using JavaScript, Python, HTML and CSS",
+          "Generated reports (PDF, Excel, charts)",
           "Designed role-based access control system",
-          "Gathered requirements with end users",
+          "Gathered requirements with users",
           "Used Git & GitHub for version control",
           "Created technical documentation"
         ],
         es: [
           "Desarrollo de un sistema web para el Poder Judicial de Veracruz",
           "Implementación de frontend y backend con JavaScript, Python, HTML y CSS",
-          "Generación de reportes en PDF, Excel y gráficos en tiempo real",
+          "Generación de reportes en PDF, Excel y gráficos",
           "Diseño de sistema de roles y permisos",
           "Levantamiento de requerimientos con usuarios finales",
           "Uso de Git y GitHub para control de versiones",
-          "Elaboración de documentación técnica"
+          "Documentación técnica del sistema"
         ]
       }}
     />
