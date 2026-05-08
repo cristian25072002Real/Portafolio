@@ -134,8 +134,7 @@ export default function App() {
       </nav>
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center justify-center px-6 relative">
-
+<section className="min-h-screen flex items-center justify-center px-6 pt-28 relative">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
