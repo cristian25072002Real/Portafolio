@@ -420,125 +420,141 @@ export default function App() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="py-24 px-6 max-w-6xl mx-auto">
+<section id="skills" className="py-24 px-6 max-w-6xl mx-auto">
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-white to-slate-400 text-transparent bg-clip-text"
-        >
-          {text[language].skills}
-        </motion.h2>
+  <motion.h2
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-white to-slate-400 text-transparent bg-clip-text"
+  >
+    {text[language].skills}
+  </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+  <div className="grid md:grid-cols-2 gap-8">
 
-          {/* DEVELOPMENT */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ y: -8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+    {/* WEB DEVELOPMENT */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ y: -8 }}
+      className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+    >
+      <h3 className="text-2xl font-bold mb-2">
+        💻 {language === "en" ? "Frontend & Web Development" : "Desarrollo Web y Frontend"}
+      </h3>
+
+      <p className="text-slate-400 mb-6 text-sm">
+        {language === "en"
+          ? "Building responsive interfaces, reusable components and interactive user experiences."
+          : "Creación de interfaces responsivas, componentes reutilizables y experiencias interactivas."}
+      </p>
+
+      <div className="flex flex-wrap gap-3">
+        {["React", "JavaScript", "HTML", "CSS", "Node.js", "Python", "Responsive UI"].map((skill, index) => (
+          <span
+            key={index}
+            className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
           >
-            <h3 className="text-2xl font-bold mb-6">
-              💻 Web Development
-            </h3>
+            {skill}
+          </span>
+        ))}
+      </div>
+    </motion.div>
 
-            <div className="flex flex-wrap gap-3">
-              {["React", "JavaScript", "Node.js", "HTML", "CSS", "Responsive Design"].map((skill, index) => (
-                <span
-                  key={index}
-                  className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 transition duration-300"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
+    {/* TECHNICAL SUPPORT */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      whileHover={{ y: -8 }}
+      className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+    >
+      <h3 className="text-2xl font-bold mb-2">
+        🛠 {language === "en" ? "Technical Support & Operations" : "Soporte Técnico y Operaciones"}
+      </h3>
 
-          {/* SUPPORT */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            whileHover={{ y: -8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+      <p className="text-slate-400 mb-6 text-sm">
+        {language === "en"
+          ? "Incident resolution, system stability, user support and troubleshooting in production environments."
+          : "Resolución de incidencias, estabilidad de sistemas, soporte a usuarios y diagnóstico en entornos productivos."}
+      </p>
+
+      <div className="flex flex-wrap gap-3">
+        {["Incident Management", "Ticketing Systems", "Troubleshooting", "Remote Support", "Windows", "Documentation"].map((skill, index) => (
+          <span
+            key={index}
+            className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
           >
-            <h3 className="text-2xl font-bold mb-6">
-              🛠 Technical Support
-            </h3>
+            {skill}
+          </span>
+        ))}
+      </div>
+    </motion.div>
 
-            <div className="flex flex-wrap gap-3">
-              {["Incident Management", "Ticketing", "Remote Support", "Troubleshooting", "Windows", "Documentation"].map((skill, index) => (
-                <span
-                  key={index}
-                  className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 transition duration-300"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
+    {/* DATABASES & TOOLS */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      whileHover={{ y: -8 }}
+      className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+    >
+      <h3 className="text-2xl font-bold mb-2">
+        🗄 {language === "en" ? "Databases & Development Tools" : "Bases de Datos y Herramientas"}
+      </h3>
 
-          {/* DATABASES */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            whileHover={{ y: -8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+      <p className="text-slate-400 mb-6 text-sm">
+        {language === "en"
+          ? "Data handling, version control and API integration for scalable applications."
+          : "Manejo de datos, control de versiones e integración de APIs para aplicaciones escalables."}
+      </p>
+
+      <div className="flex flex-wrap gap-3">
+        {["SQL", "Git", "GitHub", "REST APIs", "Version Control"].map((skill, index) => (
+          <span
+            key={index}
+            className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
           >
-            <h3 className="text-2xl font-bold mb-6">
-              🗄 Databases & Tools
-            </h3>
+            {skill}
+          </span>
+        ))}
+      </div>
+    </motion.div>
 
-            <div className="flex flex-wrap gap-3">
-              {["SQL", "Git", "GitHub", "APIs", "Version Control"].map((skill, index) => (
-                <span
-                  key={index}
-                  className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 transition duration-300"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
+    {/* QA */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      whileHover={{ y: -8 }}
+      className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+    >
+      <h3 className="text-2xl font-bold mb-2">
+        ✅ QA & {language === "en" ? "Testing" : "Pruebas de Software"}
+      </h3>
 
-          {/* QA */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            whileHover={{ y: -8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/20 rounded-3xl p-8 hover:border-blue-500 transition duration-500"
+      <p className="text-slate-400 mb-6 text-sm">
+        {language === "en"
+          ? "Validation, testing and analysis to ensure system reliability and quality."
+          : "Validación, pruebas y análisis para garantizar la calidad y confiabilidad de los sistemas."}
+      </p>
+
+      <div className="flex flex-wrap gap-3">
+        {["Functional Testing", "Bug Reporting", "System Validation", "User Testing", "Quality Assurance"].map((skill, index) => (
+          <span
+            key={index}
+            className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 transition duration-300"
           >
-            <h3 className="text-2xl font-bold mb-6">
-              ✅ QA & Testing
-            </h3>
+            {skill}
+          </span>
+        ))}
+      </div>
+    </motion.div>
 
-            <div className="flex flex-wrap gap-3">
-              {[
-                "Functional Testing",
-                "Bug Reporting",
-                "System Validation",
-                "Incident Analysis",
-                "Documentation",
-                "User Testing",
-              ].map((skill, index) => (
-                <span
-                  key={index}
-                  className="bg-slate-800 px-4 py-2 rounded-xl text-slate-300 hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 transition duration-300"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-        </div>
-
-      </section>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="py-10 text-center text-slate-500 border-t border-white/10 mt-20">
